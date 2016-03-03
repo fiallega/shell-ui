@@ -1,0 +1,50 @@
+debug: true
+
+server:
+  context-path: /wasdservice
+  port: 9093
+
+spring:
+  aop:
+    proxy-target-class: true
+
+
+security:
+  user:
+    password: none
+  oauth2:
+    client:
+      access-token-uri: https://S0141668.miamidade.gov:9999/uaa/oauth/token
+      userAuthorizationUri: https://S0141668.miamidade.gov:9999/uaa/oauth/authorize
+      client-id: local
+      client-secret: localsecret
+    resource:
+      user-info-uri: https://S0141668.miamidade.gov:9999/uaa/user
+
+
+zuul:
+  routes:
+    userInfo:
+      path: /uaa/userInfo/**
+      url: https://S0141668.miamidade.gov:9999/uaa/userInfo
+    configuration:
+      path: /uaa/configuration/**
+      url: https://S0141668.miamidade.gov:9999/uaa/configuration
+    resource:
+      path: /wasd/**
+      url: https://s0141668.miamidade.gov:8081/wasd
+
+logging:
+  level:
+    org.springframework.security: DEBUG
+
+
+
+
+
+constants:
+   userUrl: https://S0141668.miamidade.gov:9999/uaa/user
+
+
+
+

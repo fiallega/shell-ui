@@ -1,0 +1,201 @@
+<!doctype html>
+<html class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport"    content="width=device-width, initial-scale=1">
+    <meta name="description" content="Miami-Dade Country WASD Self Service">
+    <meta name="author"      content="">
+
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="icon"          href="images/favicon.ico">
+
+    <title>WASD Self Service Application</title>
+
+    <!-- build:css(.) styles/vendor.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="bower_components/angular-ui-select/dist/select.css" />
+    <link rel="stylesheet" href="bower_components/fontawesome/css/font-awesome.css" />
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:css(.tmp) styles/wasd.css -->
+    <link type='text/css' rel="stylesheet" href="styles/bootstrap.min.custom.css">
+    <link type='text/css' rel="stylesheet" href="styles/select2.css">
+    <link type='text/css' rel="stylesheet" href="styles/select2-bootstrap.css">
+    <link type='text/css' rel="stylesheet" href="styles/wasd.css">
+    <link type='text/css' rel="stylesheet" href="styles/pace-background-spinner.css">
+    <!-- endbuild -->
+
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,700,900' rel='stylesheet' type='text/css'>
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script type="text/javascript" src="js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <!--[if lt IE 9]><script type="text/javascript" src="js/ie-emulation-modes-warning.js"></script><![endif]-->
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]><script type="text/javascript" src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script><![endif]-->
+    <!--[if lt IE 9]><script type="text/javascript" src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+    <!--[if lt IE 9]><script type="text/javascript" src="scripts/css3-mediaqueries.min.js"></script><![endif]-->
+
+
+
+
+
+  </head>
+
+  <body ng-app="wasd.selfServiceApp">
+
+    <!-- Add your site or application content here -->
+    <ui-view></ui-view>
+
+    <!-- build:js(.) scripts/oldieshim.js -->
+    <!--[if lt IE 9]><script type="text/javascript" src="bower_components/es5-shim/es5-shim.js"></script><![endif]-->
+    <!--[if lt IE 9]><script type="text/javascript" src="bower_components/json3/lib/json3.js"></script><![endif]-->
+    <!-- endbuild -->
+
+    <!-- build:js(.) scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.js"></script>
+    <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+    <script src="bower_components/angular-resource/angular-resource.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+    <script src="bower_components/angular-google-chart/ng-google-chart.js"></script>
+    <script src="bower_components/angular-ui-select/dist/select.js"></script>
+    <script src="bower_components/ng-pattern-restrict/src/ng-pattern-restrict.js"></script>
+    <script src="bower_components/pace/pace.js"></script>
+    <script src="bower_components/lodash/lodash.js"></script>
+    <script src="bower_components/angular-bootstrap-show-errors/src/showErrors.js"></script>
+    <script src="bower_components/angular-ui-mask/dist/mask.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:js({.tmp,app}) scripts/scripts.js -->
+    <script type="text/javascript" src="scripts/app.js"></script>
+	  <script type="text/javascript" src="scripts/services/environment.config.js" />
+    <script type="text/javascript" src="scripts/model/Model.js"></script>
+    <script type="text/javascript" src="scripts/model/Bits.js"></script>
+    <script type="text/javascript" src="scripts/model/AccountStateInterface.js"></script>
+    <script type="text/javascript" src="scripts/model/AccountState.js"></script>
+    <script type="text/javascript" src="scripts/model/Account.js"></script>
+    <script type="text/javascript" src="scripts/model/Accounts.js"></script>
+    <script type="text/javascript" src="scripts/model/BitsHelper.js"></script>
+    <script type="text/javascript" src="scripts/model/Notifications.js"></script>
+    <script type="text/javascript" src="scripts/model/AlertItem.js"></script>
+    <script type="text/javascript" src="scripts/model/Address.js"></script>
+    <script type="text/javascript" src="scripts/model/BillingAddress.js"></script>
+    <script type="text/javascript" src="scripts/model/BillAdjustmentItem.js"></script>
+    <script type="text/javascript" src="scripts/model/BillItem.js"></script>
+    <script type="text/javascript" src="scripts/model/BillSegmentItem.js"></script>
+    <script type="text/javascript" src="scripts/model/Bills.js"></script>
+    <script type="text/javascript" src="scripts/model/Business.js"></script>
+    <script type="text/javascript" src="scripts/model/Identification.js"></script>
+    <script type="text/javascript" src="scripts/model/FieldActivitiesItem.js"></script>
+    <script type="text/javascript" src="scripts/model/FinancialInformation.js"></script>
+    <script type="text/javascript" src="scripts/model/MessageItem.js"></script>
+    <script type="text/javascript" src="scripts/model/MeterPoint.js"></script>
+    <script type="text/javascript" src="scripts/model/ModalWizard.js"></script>
+    <script type="text/javascript" src="scripts/model/PayTenderItem.js"></script>
+    <script type="text/javascript" src="scripts/model/Payments.js"></script>
+    <script type="text/javascript" src="scripts/model/Person.js"></script>
+    <script type="text/javascript" src="scripts/model/Premise.js"></script>
+    <script type="text/javascript" src="scripts/model/PremiseInformation.js"></script>
+    <script type="text/javascript" src="scripts/model/PremiseLocation.js"></script>
+    <script type="text/javascript" src="scripts/model/PremisePool.js"></script>
+    <script type="text/javascript" src="scripts/model/PropertyError.js"></script>
+    <script type="text/javascript" src="scripts/model/ServiceActivitiesItem.js"></script>
+    <script type="text/javascript" src="scripts/model/ServiceError.js"></script>
+    <script type="text/javascript" src="scripts/model/ServicePointItem.js"></script>
+    <script type="text/javascript" src="scripts/model/ServiceTypeItem.js"></script>
+    <script type="text/javascript" src="scripts/model/ServiceTypes.js"></script>
+    <script type="text/javascript" src="scripts/model/UsageChart.js"></script>
+    <script type="text/javascript" src="scripts/model/UsageItem.js"></script>
+    <script type="text/javascript" src="scripts/model/WaterAndSewerUsage.js"></script>
+    <script type="text/javascript" src="scripts/services/User.js"></script>
+    <script type="text/javascript" src="scripts/services/unauthorized.http.interceptor.service.js"></script>
+
+    <script type="text/javascript" src="scripts/app/components/serviceAddress/serviceAddress.controller.js"></script>
+    <script type="text/javascript" src="scripts/app/components/usage/usage.controller.js"></script>
+    <script type="text/javascript" src="scripts/app/components/information/information.controller.js"></script>
+    <script type="text/javascript" src="scripts/app/components/information/information.paybill.controller.js"></script>
+    <script type="text/javascript" src="scripts/app/components/information/financialInformation.service.js"></script>
+    <script type="text/javascript" src="scripts/app/components/information/premiseInformation.service.js"></script>
+    <script type="text/javascript" src="scripts/app/components/billHistory/bills.service.js"></script>
+    <script type="text/javascript" src="scripts/app/components/information/meterpoints.service.js"></script>
+    <script type="text/javascript" src="scripts/app/components/information/services.service.js"></script>
+    <script type="text/javascript" src="scripts/app/components/information/serviceTypes.service.js"></script>
+    <script type="text/javascript" src="scripts/app/components/paymentHistory/paymenthistory.service.js"></script>
+    <script type="text/javascript" src="scripts/app/components/usage/usage.service.js"></script>
+    <script type="text/javascript" src="scripts/app/components/modals/paybillmodal.service.js"></script>
+    <script type="text/javascript" src="views/nav.controller.js"></script>
+    <script type="text/javascript" src="views/sidebar.menu.resizer.js"></script>
+    <script type="text/javascript" src="views/sidebar.controller.js"></script>
+
+    <script type="text/javascript" src="scripts/services/account.enrollment.service.js"></script>
+    <script type="text/javascript" src="scripts/app/components/modals/sidebar.linkaccount.controller.js"></script>
+    <script type="text/javascript" src="scripts/app/components/modals/sidebar.unlinkaccount.controller.js"></script>
+    <script type="text/javascript" src="scripts/app/components/modals/sidebar.paybill.controller.js"></script>
+    <script type="text/javascript" src="scripts/app/components/information/paybill.controller.js"></script>
+
+    <script type="text/javascript" src="scripts/app/components/bill/bill.controller.js"></script>
+    <script type="text/javascript" src="scripts/app/components/bill/bill.adjustmentdetails.controller.js"></script>
+    <script type="text/javascript" src="scripts/app/components/billHistory/bills.errordetails.controller.js"></script>
+    <script type="text/javascript" src="scripts/app/components/billHistory/bills.controller.js"></script>
+    <script type="text/javascript" src="scripts/app/components/paymentHistory/paymenthistory.controller.js"></script>
+    <script type="text/javascript" src="scripts/app/components/usage/usage.controller.js"></script>
+
+    <script type="text/javascript" src="scripts/services/accounts.service.js"></script>
+    <script type="text/javascript" src="scripts/services/navigation.service.js"></script>
+    <script type="text/javascript" src="scripts/services/session.service.js"></script>
+    <script type="text/javascript" src="scripts/services/wasd.configuration.js"></script>
+    <script type="text/javascript" src="scripts/services/wasd.messages.js"></script>
+    <script type="text/javascript" src="scripts/services/wasd.codes.js"></script>
+    <script type="text/javascript" src="scripts/services/utils.js"></script>
+
+    <script type="text/javascript" src="scripts/directives/focusMe.js"></script>
+    <script type="text/javascript" src="scripts/filters/customfilters.js"></script>
+    <script type="text/javascript" src="scripts/directives/anchor-disabled.js"></script>
+    <script type="text/javascript" src="scripts/directives/ui-sref-disabled.js"></script>
+    <script type="text/javascript" src="scripts/directives/focus-me.js"></script>
+    <script type="text/javascript" src="scripts/directives/menu-toggle.js"></script>
+    <script type="text/javascript" src="scripts/directives/pay-bill-alert.js"></script>
+    <script type="text/javascript" src="scripts/directives/menu-hide.js"></script>
+    <script type="text/javascript" src="scripts/directives/app-refresh.js"></script>
+    <script type="text/javascript" src="scripts/directives/ng-enter.js"></script>
+
+    <script type="text/javascript" src="scripts/app/components/messages/notifications.service.js"></script>
+    <script type="text/javascript" src="scripts/app/components/messages/alerts.controller.js"></script>
+    <script type="text/javascript" src="scripts/app/components/messages/messages.controller.js"></script>
+
+    <script type="text/javascript" src="scripts/js/wasd.js"></script>
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script type="text/javascript" src="scripts/js/ie10-viewport-bug-workaround.js"></script>
+
+    <!-- endbuild -->
+
+    <div class="pace-background">
+    <!--[if IE 9]><div class="ie9"><![endif]-->
+    <div class="loader">Loading...</div>
+    <!--[if IE 9]></div><![endif]-->
+    </div>
+
+    <!-- Google Tag Manager -->
+    <!--
+    <noscript>
+      <iframe src="//www.googletagmanager.com/ns.html?id=GTM-PND934" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    </noscript>
+    <script>
+      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-PND934');
+    </script>
+    -->
+    <!-- End Google Tag Manager -->
+  </body>
+</html>
